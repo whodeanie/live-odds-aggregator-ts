@@ -1,0 +1,24 @@
+{
+  "name": "live-odds-aggregator-ts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multi book odds aggregator. Hono backend, Next.js frontend, shared TS types. Educational analytics.",
+  "license": "MIT",
+  "workspaces": [
+    "packages/shared",
+    "packages/server",
+    "packages/web"
+  ],
+  "scripts": {
+    "build": "npm run build -ws --if-present",
+    "lint": "npm run lint -ws --if-present",
+    "typecheck": "npm run typecheck -ws --if-present",
+    "test": "npm run test -ws --if-present",
+    "dev:server": "npm run dev -w @loa/server",
+    "dev:web": "npm run dev -w @loa/web"
+  },
+  "devDependencies": {
+    "prettier": "3.3.3",
+    "typescript": "5.6.3"
+  }
+}
